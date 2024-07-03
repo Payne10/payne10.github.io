@@ -3,78 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Payne Kauffman - Portfolio</title>
+    <title>Payne Kauffman</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
+            background-color: #000;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        header h1 {
-            text-align: center;
             margin: 0;
-            padding-bottom: 10px;
         }
-        .content {
+        .center-content {
+            display: table;
+            width: 100%;
+            height: 100vh;
+        }
+        .center-content p {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #timezone * {
+            text-decoration: none;
+            color: #fff;
+        }
+        a {
+            color: #818991;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .section {
             padding: 20px;
+            text-align: center;
         }
-        .content h2, .content p {
-            margin: 0 0 20px 0;
+        .section h2 {
+            margin-bottom: 20px;
         }
     </style>
+    <script type="text/javascript">
+        // declare time zone formatting
+        let options = {
+            timeZone: 'US/Central',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+        },
+        formatter = new Intl.DateTimeFormat([], options);
+
+        // set time
+        setInterval(
+            () => {
+                document.querySelector("#time").innerText = formatter.format(new Date());
+            }
+        , 1000)
+    </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Payne Kauffman - Computer Scientist</h1>
+    <div class="center-content">
+        <p>
+            <font size="7"><i><b>Payne Kauffman</b></i></font> <br><br>
+            <img src="assets/6bRpzal.jpeg" style="width:560px;"><br><br>
+            <span id="timezone">
+                <i>
+                    <a href="https://24timezones.com/usa_time/ia_johnson/iowa_city.php">TIME IN IOWA CITY</a> - 
+                    <span id="time">0:00 PM</span> 
+                    <a href="https://24timezones.com/time-zone/cst">CST</a>
+                </i>
+            </span>
+            <br><br>
+            [
+            <a href="about.html">about</a> |
+            <a href="https://www.dropbox.com/scl/fi/o3xf5a0nnitpqlmbdu71v/Paynes__Resume.pdf?rlkey=7s1citakceiaxi2rfuspom2m4&st=elus5t7r&dl=1">resume</a> |
+            <a href="coming_soon.html">projects</a> |
+            <a href="coming_soon.html">home lab</a> |
+            <a href="blog/index.html">blog</a> |
+            <a href="contact.html">contact</a>
+            ]
+            <br><br>
+            <div id="content"></div>
+        </p>
+    </div>
+
+    <div class="section" id="latest-blog">
+        <h2>Latest Blog Post</h2>
+        <div>
+            <!-- Content for the latest blog post goes here -->
         </div>
-    </header>
+    </div>
 
-    <div class="content container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                I love computers
-            </p>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio/Projects</h2>
-            <p>
-              DCIM Pull | Python, SQL, REST, Git June 2023 – Present
-              • Developed API interfacing application using Python and REST API
-              • Created scripts to pull Fiber locations and connections for 2000+ jumpers
-              • Wrote simple scripts for outside teams to use for data harvesting
-            </p>
-            <p>
-              Home Lab | Python, Docker, Docker-compose, Bash, SQL, REST, HTML, CSS, Git June 2018 – Present
-              • Deploy, host, and maintain 20+ containers
-              • Create Bash scripts to automate tasks and updates within the server
-              • Create and host multiple game servers played by 30+ users
-              • Deploy a network that is both safe and access-able to users
-            </p>
-            <!-- Add more projects as needed -->
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>
-                Feel free to contact me via email at <a href="mailto:pakaffman@proton.me">pakauffman@proton.me</a>.
-            </p>
-        </section>
+    <div class="section" id="latest-book-review">
+        <h2>Latest Book Review</h2>
+        <div>
+            <!-- Content for the latest book review goes here -->
+        </div>
     </div>
 </body>
 </html>
