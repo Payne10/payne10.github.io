@@ -1,55 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="blog/blog.css">
-    <style>
-        .blog-header {
-            text-align: center;
-            padding: 32px;
-        }
-        .blog-main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .blog-post {
-            width: 100%;
-            max-width: 600px;
-            padding: 16px;
-            margin: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../about.html">About</a>
-            <a href="../contact.html">Contact</a>
-            <a href="index.html">Blog</a>
-        </nav>
-    </header>
-    <div class="blog-header">
-        <h1>Blog</h1>
-    </div>
-    <div class="blog-main">
-        <div class="blog-post">
-            <h2><a href="post1.html">Post 1</a></h2>
-            <p>This is a summary of Post 1.</p>
-        </div>
-        <div class="blog-post">
-            <h2><a href="post2.html">Post 2</a></h2>
-            <p>This is a summary of Post 2.</p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
-    </footer>
-</body>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="blog.css">
+    </head>
+    <body> 
+        <header>
+            <div class="container container-flex">
+                <div class="site-title">
+                    <h1>possible nerd</h1>
+                    <p class="subtitle">hyperfocusing on random technology</p>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html">Index</a></li>
+                    </ul>
+                </nav>
+            </div> <!-- / .container -->
+        </header>
+        
+        <div class="container container-flex">
+            <main role="main">
+                
+                <article class="article-featured">
+                    <h2 class="article-title">Record of my hobbies</h2>
+                    <img src="/assets/2001_red.png" alt="simple white desk on a white wall with a plant on the far right side" class="article-image">
+                    <p class="article-body">Looking around my apartment I have realized how many thing I have done that involve my hobbies. So I started writing these as a personal bank of things I have done in the past. This is useful for reference, but also increases my understanding of what I have worked on.</p>
+                </article>
+                
+                <article class="article-recent">
+                    <div class="article-recent-main">
+                        <h2 class="article-title">How to keep your cooking simple </h2>
+                        <p class="article-body">Food is a very important part of everyone's life. If you want to be healthy, you have to eat healthy. One of the easiest ways to do that is to keep your cooking nice and simple.</p>
+                        <a href="#" class="article-read-more">CONTINUE READING</a>
+                    </div>
+                    <div class="article-recent-secondary">
+                        <img src="img/food.jpg" alt="two dumplings on a wood plate with chopsticks" class="article-image">
+                    </div>
+                </article>
+            </main>
+    </body>
 </html>
